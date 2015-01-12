@@ -40,7 +40,7 @@ module Hutch
     end
 
     # Connect to RabbitMQ via AMQP. This sets up the main connection and
-    # channel we use for talking to RabbitMQ. It also ensures the existance of
+    # channel we use for talking to RabbitMQ. It also ensures the existence of
     # the exchange we'll be using.
     def set_up_amqp_connection
       open_connection!
