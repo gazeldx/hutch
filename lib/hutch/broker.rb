@@ -47,10 +47,10 @@ module Hutch
       open_channel!
 
       exchange_name = @config[:mq_exchange]
-      logger.info "using topic exchange '#{exchange_name}'"
+      logger.info "using direct exchange '#{exchange_name}'"
 
       with_bunny_precondition_handler('exchange') do
-        @exchange = @channel.topic(exchange_name, durable: true)
+        @exchange = @channel.direct(exchange_name, durable: true)
       end
     end
 
